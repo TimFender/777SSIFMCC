@@ -45,7 +45,7 @@
 .ribbon span {
   font-size: 12px;
   font-weight: bold;
-  color: #333;
+  color: var(--neutral-950);
   text-transform: uppercase;
   text-align: center;
   line-height: 20px;
