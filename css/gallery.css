@@ -255,6 +255,9 @@
     width: 100%;
     padding-top: 10%;
   }
+    .modal::-webkit-scrollbar {
+    width: 0;
+  }
   .modal-content {
     max-width: 100%;
     width: 100%;
@@ -292,6 +295,9 @@
   .modal {
     width: 100%;
     padding-top: 5%;
+  }
+    .modal::-webkit-scrollbar {
+    width: 0;
   }
   .modal-content {
     max-width: 100%;
