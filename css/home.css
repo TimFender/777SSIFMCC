@@ -261,7 +261,7 @@ body.fade-out {
 /* Adaptive style for Smartphones */
 @media only screen and (max-width: 767px) {
   .wrapper {
-    background-image: url("https://raw.githubusercontent.com/TimFender/777SEVENSMCC/main/img/backgrounds/backgroundwrapper.jpg");
+    background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundwrapper.jpg");
     background-position: center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
@@ -311,7 +311,7 @@ body.fade-out {
 /* Adaptive style for Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1144px) {
   .wrapper {
-    background-image: url("https://raw.githubusercontent.com/TimFender/777SEVENSMCC/main/img/backgrounds/backgroundwrapper.jpg");
+    background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundwrapper.jpg");
     background-position: center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
