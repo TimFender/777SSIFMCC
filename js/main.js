@@ -99,3 +99,8 @@ document.querySelectorAll(".scrollToTopLink").forEach(function (link) {
     });
   });
 });
+
+
+// app.js
+// Встановлення cookie з атрибутами SameSite=None і Secure
+document.cookie = "cookieName=cookieValue; SameSite=None; Secure";
