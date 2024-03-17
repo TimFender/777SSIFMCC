@@ -386,7 +386,7 @@ iframe {
 }
 
 .right__box {
-  background-image: url(/img/backgrounds/emailformbackground.png);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/emailformbackground.png");
   background-repeat: no-repeat;
   background-position: center left;
   background-size: cover;
@@ -510,7 +510,7 @@ form {
   text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
 }
 .droplist__container {
-  background-image: url(/img/backgrounds/backgroundfooter.jpg);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundfooter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
