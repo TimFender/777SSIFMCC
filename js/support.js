@@ -1,40 +1,45 @@
-// Функция открытия модального окна
+// Функція відкриття модального вікна при кліку на кнопку "Add to Cart"
 function openModal(modalClass) {
   var modal = document.querySelector("." + modalClass);
   modal.style.display = "block";
 }
 
-// Получаем все модальные окна с классом modal-store
+// Отримуємо всі модальні вікна з класом .modal-store
 var modals = document.querySelectorAll(".modal-store");
 
-// Получаем все карточки товаров
+// Отримуємо всі карточки товарів
 var productCards = document.querySelectorAll(".product-card");
 
-// Перебираем полученные карточки товаров
+// Перебираємо отримані карточки товарів
 productCards.forEach(function (card, index) {
-  // Добавляем обработчик события клика
-  card.addEventListener("click", function () {
-    // Получаем соответствующий модальный элемент
-    var modal = modals[index];
-    // Показываем модальное окно
-    modal.style.display = "block";
+  // Додаємо обробник події кліку до карточки товару
+  card.addEventListener("click", function (event) {
+    // Перевіряємо, чи клікнуто саме на кнопку "Add to Cart"
+    if (event.target.classList.contains("back-button")) {
+      // Отримуємо відповідне модальне вікно
+      var modal = modals[index];
+      // Показуємо модальне вікно
+      openModal(modal.classList[1]); // Викликаємо функцію відкриття модального вікна з класом
+    }
   });
 });
 
-// Перебираем полученные модальные окна
+// Перебираємо отримані модальні вікна
 modals.forEach(function (modal) {
-  // Получаем кнопку закрытия модального окна в текущем модальном окне
+  // Отримуємо кнопку закриття модального вікна в поточному модальному вікні
   var closeBtn = modal.querySelector(".close");
 
-  // Функция закрытия модального окна
+  // Функція закриття модального вікна
   closeBtn.onclick = function () {
     modal.style.display = "none";
   };
+});
 
-  // Закрываем модальное окно, если пользователь щелкает за его пределами
-  window.onclick = function (event) {
+// Закриваємо модальне вікно, якщо користувач клікає за його межами
+window.onclick = function (event) {
+  modals.forEach(function (modal) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  };
-});
+  });
+};
