@@ -93,7 +93,7 @@
   padding: 20px;
 }
 .shadow-blink {
-  animation: shadow-blink 2s infinite; /* Применяем анимацию */
+  animation: shadow-blink 2s infinite;
 }
 @keyframes shadow-blink {
   0% {
@@ -113,7 +113,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/img/backgrounds/backgroundfooter.jpg);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundfooter.jpg");
   background-repeat: no-repeat;
   background-position: center;
   border: 3px solid var(--gold-600);
@@ -511,7 +511,7 @@
   width: 100%;
   height: auto;
   padding: 30px 0;
-  background-image: url(/img/backgrounds/backgroundstore.jpg);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundstore.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -878,7 +878,7 @@
   justify-content: center;
   gap: 50px;
   margin-top: 85px;
-  background-image: url(/img/backgrounds/backgroundstore.jpg);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundstore.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1028,7 +1028,7 @@
 .card-wrapper {
   background-color: #000000;
   border-radius: 10px;
-  background-image: url(/img/backgrounds/backgroundfooter.jpg);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundfooter.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
