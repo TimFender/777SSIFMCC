@@ -252,7 +252,7 @@
   position: relative;
   top: 0;
   left: 0;
-  background: url(/img/backgrounds/backgroundwrapper.jpg);
+  background: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundwrapper.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -262,7 +262,7 @@
 }
 .profile::before {
   content: "";
-  background: url(/img/elements/ramka.png);
+  background: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/elements/ramka.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: border-box;
@@ -331,7 +331,7 @@
   position: absolute;
   bottom: -1%;
   z-index: 30;
-  background-image: url(/img/elements/miniramka.png);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/elements/miniramka.png");
   background-position-x: center;
   background-repeat: no-repeat;
   background-clip: border-box;
