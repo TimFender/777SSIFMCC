@@ -179,7 +179,7 @@ figure.card.hover img {
   text-align: center;
   box-shadow: 0px 8px 12px 0px #000000;
   border-radius: 10px;
-  background-image: url(/img/backgrounds/backgroundstore.jpg);
+   background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundstore.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
