@@ -26,7 +26,6 @@
   align-items: center;
   gap: 30px;
   margin-top: 100px;
-  padding: 20px;
   box-shadow: -5px 5px 12px 5px #000000;
   background-color: #00000041;
   border-radius: 7px;
@@ -84,9 +83,10 @@
 }
 /* ---End Style ribbon --- */
 
+/* SUPPORT STICK */
 .support__stick {
   max-width: 100%;
-  height: 400px;
+  height: 270px;
   text-align: center;
   background-color: black;
   border-radius: 10px;
@@ -131,16 +131,11 @@
   padding: 20px;
 }
 .support__content h2 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 600;
 }
-.sup {
+.sup, .desc {
   font-size: 30px;
-  font-weight: 600;
-  letter-spacing: 3px;
-}
-.desc {
-  font-size: 25px;
   font-weight: 600;
   letter-spacing: 3px;
 }
@@ -501,6 +496,7 @@
       0 0 80px rgba(255, 255, 255, 0.913), 0 0 100px rgba(0, 0, 0, 0.5);
   }
 }
+
 /* ВИВІСКА ВЕРХНЯ МАГАЗИНУ */
 .support__poster {
   position: relative;
@@ -886,6 +882,7 @@
   padding: 50px 20px;
   box-shadow: 0px -5px 10px 1px #000000, 0px 5px 10px 1px #000000;
 }
+
 /* PRODUCTS CARD STYLE */
 .product-card {
   position: relative;
@@ -958,7 +955,7 @@
   font-size: 20px;
   padding: 15px;
 }
-.back button {
+.back-button {
   font-family: "Jost";
   font-weight: 800;
   font-size: 18px;
@@ -973,8 +970,118 @@
   cursor: pointer;
   box-shadow: -3px 3px 10px 1px #000000;
 }
-.back button:hover {
+.back-button:hover {
   background-color: var(--gold-600);
+}
+
+/* MODAL WINDOW STORE */
+.modal-store {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.615);
+}
+.modal-content {
+  position: relative;
+  background-color: var(--neutral-800);
+  margin: 10% auto;
+  padding: 40px 20px;
+  border: 1px solid var(--gold-600);
+  border-radius: 7px;
+  width: 70%;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-title {
+  display: inline;
+  font-size: 27px;
+  letter-spacing: 5px;
+}
+.modalcode-product {
+  margin-bottom: 20px;
+}
+.modal-images-block {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+.modal-img {
+  max-width: 30%;
+  border-radius: 7px;
+  filter: drop-shadow(-3px 7px 10px #000000);
+  transition: transform 0.3s ease-in-out;
+  cursor: zoom-in;
+  box-sizing: border-box;
+}
+.modal-img:hover {
+  transform: scale(1.1);
+}
+.modal-img:active {
+  animation: zoom 0.3s forwards;
+  z-index: 10;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+.modal-product-description {
+  font-size: 20px;
+  padding: 20px 60px;
+}
+.modal-list {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.modal-list-item {
+  font-size: 20px;
+}
+.modal-btn {
+  font-family: "Jost";
+  font-weight: 800;
+  font-size: 18px;
+  width: 200px;
+  padding: 8px 12px;
+  background-color: var(--neutral-300);
+  color: var(--neutral-950);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: -3px 3px 10px 1px #000000;
+  transition: all 0.2s ease;
+}
+.modal-btn:hover {
+  background-color: var(--gold-600);
+  color: var(--neutral-300);
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  color: var(--gold-600);
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: var(--neutral-300);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* SECTION DONATE */
@@ -1028,7 +1135,7 @@
 .card-wrapper {
   background-color: #000000;
   border-radius: 10px;
-  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundfooter.jpg");
+  background-image: url(/img/backgrounds/backgroundfooter.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1108,119 +1215,6 @@
   background: linear-gradient(to bottom, #ff0000, #830000);
 }
 
-/* MODAL WINDOW STORE */
-.modal-store {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.615);
-}
-.modal-content {
-  position: relative;
-  background-color: var(--neutral-800);
-  margin: 10% auto;
-  padding: 40px 20px;
-  border: 1px solid var(--gold-600);
-  border-radius: 7px;
-  width: 70%;
-}
-.modal-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.modal-title {
-  display: inline;
-  font-size: 27px;
-  letter-spacing: 5px;
-}
-.modalcode-product {
-  margin-bottom: 20px;
-}
-.modal-images-block {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-}
-.modal-img {
-  max-width: 30%;
-  border-radius: 7px;
-  filter: drop-shadow(-3px 7px 10px #000000);
-  transition: transform 0.3s ease-in-out;
-  cursor: zoom-in;
-  box-sizing: border-box;
-}
-.modal-img:hover {
-  transform: scale(1.1);
-}
-.modal-img:active {
-  animation: zoom 0.3s forwards;
-  z-index: 10;
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(2);
-  }
-}
-.modal-product-description {
-  font-size: 20px;
-  padding: 20px 60px;
-}
-.modal-list {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 10px;
-}
-.modal-list-item {
-  font-size: 20px;
-}
-.modal-btn {
-  font-family: "Jost";
-  font-weight: 800;
-  font-size: 18px;
-  width: 200px;
-  padding: 8px 12px;
-  background-color: var(--neutral-300);
-  color: var(--neutral-950);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: -3px 3px 10px 1px #000000;
-  transition: all 0.2s ease;
-}
-.modal-btn:hover {
-  background-color: var(--gold-600);
-  color: var(--neutral-300);
-}
-.close {
-  position: absolute;
-  top: 10px;
-  right: 50px;
-  color: var(--gold-600);
-  float: right;
-  font-size: 50px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus {
-  color: var(--neutral-300);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Mobila adaptive style */
-
 /* Mobile devices adaptyve style */
 @media (max-width: 767px) {
   .support__title {
@@ -1283,7 +1277,8 @@
     width: 27px;
   }
   .storetitle {
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: 1px;
     padding: 0 25px;
     top: 30px;
   }
@@ -1297,7 +1292,7 @@
     width: 100%;
     margin-top: 10%;
   }
-    .modal-store::-webkit-scrollbar {
+  .modal-store::-webkit-scrollbar {
     width: 0;
   }
   .modal-content {
@@ -1329,7 +1324,7 @@
     gap: 10px;
     text-align: center;
   }
-  .modal-btn {
+  .modal-button {
     margin-top: 20px;
   }
   .donate__box {
@@ -1362,15 +1357,15 @@
 }
 
 /* Yablet devices adaptyve styles */
+@media screen and (width: 768px) {
+  .support__title {
+    margin-top: 10%;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .support__title {
     margin-top: 7%;
     font-size: 4vw;
-  }
-  @media screen and (width: 768px) {
-    .support__title {
-      margin-top: 10%;
-    }
   }
   .support__container {
     width: 100%;
@@ -1429,8 +1424,9 @@
   }
   .storetitle {
     font-size: 20px;
+    letter-spacing: 5px;
     padding: 0 35px;
-    top: 30px;
+    top: 25px;
   }
   .shop {
     margin-top: 50px;
@@ -1471,7 +1467,7 @@
     gap: 10px;
     text-align: center;
   }
-  .modal-btn {
+  .modal-button {
     margin-top: 20px;
   }
   .donate__box {
@@ -1498,12 +1494,74 @@
     margin-top: 20px;
   }
   .donate__button {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 50px; */
     display: flex;
     flex-wrap: wrap;
   }
 }
+
+/* Notebook adaptive styles  */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .support__container {
+    width: 90%;
+    height: 100%;
+    padding: 40px;
+  }
+  .support__stick {
+    width: 100%;
+    height: 100%;
+  }
+  .sup,
+  .desc {
+    font-size: 2.5vw;
+  }
+  .support__content h2 {
+    font-size: 3vw;
+  }
+  .support__poster {
+    width: 100%;
+  }
+  .support__poster-box {
+    width: 90%;
+  }
+  .bold1,
+  .bold2 {
+    width: 30px;
+  }
+  .storetitle {
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding: 0 35px;
+    top: 27px;
+  }
+  .shop {
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px 20px;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+  }
+  .donate__container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .donate__box-description {
+    width: 100%;
+  }
+  .donate__box li {
+    margin-top: 20px;
+  }
+  .donate__button {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 70%;
+  }
+  .card-container {
+    width: 100%;
+  }
+}
+
