@@ -440,7 +440,7 @@
   text-align: center;
   margin-top: 20px;
 }
-.support__button a {
+.support-btn {
   display: inline-block;
   background: linear-gradient(to right, #d88f07, #ffc107);
   color: var(--neutral-950);
@@ -453,7 +453,7 @@
   font-size: 20px;
   transition: color 0.3s, background 0.3s;
 }
-.support__button a:hover {
+.support-btn:hover {
   color: var(--neutral-300);
   background: linear-gradient(to right, #a66b03, #e6a400);
 }
