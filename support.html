@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="777 SEVEN'S MotorCycles Club">
+  <meta name="keywords"
+    content="777, 777 SEVEN'S MCC, MotorCycles Club, Bikers, Choppers, Motorcycles, Ukraine, Dnipro">
+  <meta name="author" content="Tim Fender">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="777 SEVEN'S MCC">
+  <meta property="og:image" content="img/flag.webp">
+  <meta property="og:description" content="777 SEVEN'S MotorCycles Club">
+  <!-- Connecting for css style files -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/support.css">
+  <!-- Connecting a favicons to the site -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#171717">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileColor" content="#171717">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#171717">
+  <!-- Connecting the script "FontAwesome" for menu burger https://fontawesome.com/kits/2f67d3c589/setup -->
+  <script src="https://kit.fontawesome.com/2f67d3c589.js" crossorigin="anonymous"></script>
+  <title>777 SEVEN'S MCC /NEWS</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- BLOCK HEADER -->
+    <header class="header">
+      <a href="404.html" class="logo"><img class="fade-in-left" src="img/elements/logoflag.png" alt="Logoflag"></a>
+      <h2 class="header__title text-focus-in">777 SEVEN'S MCC</h2>
+      <nav class="navbar">
+        <a class="menu__link" href="index.html">HOME</a>
+        <a class="menu__link" href="news.html">NEWS</a>
+        <a class="menu__link" href="about.html">ABOUT US</a>
+        <a class="menu__link" href="gallery.html">GALLERY</a>
+        <a class="menu__link" href="support.html">SUPPORT</a>
+      </nav>
+      <!-- button menu burger -->
+      <div id="menu"><i class="fa-solid fa-bars" onclick="changeIcon(this)"></i></div>
+    </header>
+    <!-- HEADER BIG BANNER SECTION -->
+    <section class="headerbanner">
+      <h3 class="headerbanner__title">FUCK OFF<br>PIDARASIA TERRORIST STATE</h3>
+      <!-- button for link to private telegram groupe -->
+      <button type="button" class="btn-telegram" onclick="redirectToExample()"></button>
+      <img class="banner" src="img/backgrounds/Headerbanner.jpg" alt="Header bigbanner">
+    </section>
+
+    <!-- BLOCK MAIN -->
+    <main class="main">
+      <div class="main__container">
+        <h1 class="support__title text-focus-in">SUPPORT TITLE</h1>
+        <p class="support__description text-focus-in">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+          maxime eius.</p>
+        <!-- SUPPORT CTICK CONTAINER -->
+        <div class="support__container">
+          <div class="ribbon"><span>Supported</span></div>
+          <div class="support__stick shadow-blink">
+            <div class="support__stick-box">
+              <div class="support__content">
+                <p class="sup">SUPPORT</p>
+                <h2>777 SEVEN'S</h2>
+                <p class="desc">MOTORCYCLES CLUB</p>
+              </div>
+            </div>
+          </div>
+          <div class="support__text">
+            <h3 class="text-flicker-in-glow">SUPPORT YOUR LOCAL</h3>
+            <p><span>SUPPORT</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias laudantium
+              voluptas tempora corrupti
+              earum? Eveniet veniam ex inventore asperiores. Quasi ea reiciendis cupiditate cum itaque vitae voluptatem
+              similique eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias laudantium
+              voluptas tempora corrupti earum.</p>
+            <!-- SUPPORT BUTTON -->
+            <div class="support__button">
+              <a class="heartbeat" href="https://www.facebook.com/777SSIFMCC?locale=uk_UA" target="_blank">S U P P O R T
+                - 777 </a>
+            </div>
+          </div>
+        </div>
+        <!-- SUPPORT SHOP -->
+        <div class="support__shop">
+          <div class="support__poster">
+            <img class="bold1" src="img/elements/bold.png" alt="bold">
+            <div class="support__poster-box">
+              <h2 class="support__shop-title">SUPPORT BIKER-STORE</h2>
+              <p class="support__shop-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quos
+                magni
+                explicabo qui temporibus, similique.</p>
+            </div>
+            <img class="bold2" src="img/elements/bold.png" alt="bold">
+            <div class="ceps">
+              <img src="img/elements/cepok.png" alt="cepok1">
+              <img src="img/elements/cepok.png" alt="cepok2">
+            </div>
+          </div>
+          <h3 class="storetitle text-title-flicker-in-glow">CLOTHES - PATCHES - STICKERS - ACCESORIES</h3>
+          <div class="shop">
+            <!-- PRODUCT CARD#1 -->
+            <div class="product-card" onclick="openModal('modal-one')">
+              <div class="ribbon"><span>S A L E %</span></div>
+              <div class="front">
+                <img src="img/store/1sup.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+            <!-- Modal-store card-product#1-->
+            <div class="modal-store modal-one">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                  <h3 class="modal-title">Title Product</h3>
+                  <p class="modalcode-product">Code: 0007</p>
+                  <div class="modal-images-block">
+                    <img class="modal-img" src="img/store/1sup.jpg" alt="Product 1">
+                    <img class="modal-img" src="img/store/1sup.jpg" alt="Product 1">
+                    <img class="modal-img" src="img/store/1sup.jpg" alt="Product 1">
+                  </div>
+                  <p class="modal-product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Repudiandae consequatur nulla quasi ut
+                    facilis quidem atque nam voluptas minus adipisci itaque praesentium maiores cumque tempore
+                    voluptates architecto, inventore odit reiciendis Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Repudiandae consequatur nulla quasi ut facilis quidem atque nam voluptas minus adipisci itaque
+                    praesentium maiores cumque tempore voluptates architecto, inventore odit reiciendis.</p>
+                  <ul class="modal-list">
+                    <li class="modal-list-item">list1 <span>something-item ;</span></li>
+                    <li class="modal-list-item">list2 <span>something-item ;</span></li>
+                    <li class="modal-list-item">list3 <span>something-item ;</span></li>
+                  </ul>
+                  <button class="modal-btn">Buy it 7$</button>
+                </div>
+              </div>
+            </div>
+            <!-- End modal store -->
+            <!-- PRODUCT CARD#2 -->
+            <div class="product-card" onclick="openModal('modal-two')">
+              <div class="front">
+                <img src="img/store/2sup.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 700$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+            <!-- Modal-store card-product#2-->
+            <div class="modal-store modal-two">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                  <h3 class="modal-title">Title Product</h3>
+                  <p class="modalcode-product">Code: 0006</p>
+                  <div class="modal-images-block">
+                    <img class="modal-img" src="img/store/2sup.jpg" alt="Product 1">
+                    <img class="modal-img" src="img/store/3sup.jpg" alt="Product 1">
+                    <img class="modal-img" src="img/store/4sup.jpg" alt="Product 1">
+                  </div>
+                  <p class="modal-product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Repudiandae consequatur nulla quasi ut
+                    facilis quidem atque nam voluptas minus adipisci itaque praesentium maiores cumque tempore
+                    voluptates architecto, inventore odit reiciendis Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit.</p>
+                  <ul class="modal-list">
+                    <li class="modal-list-item">list1 <span>something-item ;</span></li>
+                    <li class="modal-list-item">list2 <span>something-item ;</span></li>
+                    <li class="modal-list-item">list3 <span>something-item ;</span></li>
+                  </ul>
+                  <button class="modal-btn">Buy it 6$</button>
+                </div>
+              </div>
+            </div>
+            <!-- End modal store -->
+
+            <!-- PRODUCT CARD#3 -->
+            <div class="product-card">
+              <div class="front">
+                <img src="img/store/3sup.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD#4 -->
+            <div class="product-card">
+              <div class="front">
+                <img src="img/store/4sup.jpg" alt="Product 4">
+                <h3>Product 4</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD#5 -->
+            <div class="product-card">
+              <div class="front">
+                <img src="img/store/5sup.jpg" alt="Product 5">
+                <h3>Product 5</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD#6 -->
+            <div class="product-card">
+              <div class="front">
+                <img src="img/store/3.jpg" alt="Product 6">
+                <h3>Product 6</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD#7 -->
+            <div class="product-card">
+              <div class="front">
+                <img src="img/store/4.jpg" alt="Product 7">
+                <h3>Product 7</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD#8 -->
+            <div class="product-card">
+              <div class="front">
+                <img src="img/store/5.jpeg" alt="Product 8">
+                <h3>Product 8</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD#9 -->
+            <div class="product-card">
+              <div class="ribbon"><span>S A L E %</span></div>
+              <div class="front">
+                <img src="img/store/1.jpg" alt="Product 9">
+                <h3>Product 9</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+
+            <!-- PRODUCT CARD#10 -->
+            <div class="product-card">
+              <div class="ribbon"><span>S A L E %</span></div>
+              <div class="front">
+                <img src="img/store/2.webp" alt="Product 10">
+                <h3>Product 10</h3>
+                <p class="product-description">Description of Product...</p>
+                <p class="price">PRICE - 7$</p>
+              </div>
+              <div class="back">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis obcaecati laborum beatae nihil at
+                  consequuntur autem delectus excepturi itaque perferendis ratione a quisquam deleniti incidunt quae,
+                  harum maxime! Sunt, amet.</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- DONATE BOX -->
+          <div class="donate__box">
+            <div class="donate__container">
+              <div class="card">
+                <div class="card-wrapper">
+                  <div class="card-container">
+                    <div class="card-header">
+                      <div class="card-headerleft">
+                        <img class="card-header-img" src="img/elements/motor.png" alt="logo">
+                        <p>777 SEVEN'S CARD <br>monobank</p>
+                      </div>
+                      <img class="chip" src="img/elements/chip.png" alt="chip">
+                    </div>
+                    <div class="card-body">
+                      <p>Card Number :</p>
+                      <p class="card-number">1231 4564 7897 0123</p>
+                    </div>
+                    <div class="card-footer">
+                      <p>Johny Done <br><span>Treasurer</span></p>
+                      <p>Valid Thru <br>05/28</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="donate__box-description">
+                <h3>DONATE for 777 BANK</h3>
+                <p><span>Donate box</span> ipsum dolor sit amet consectetur adipisicing elit. Amet id fugit quis sunt,
+                  architecto optio nostrum illum ipsam officiis rerum quisquam! Blanditiis magnam, delectus laudantium
+                  excepturi asperiores aut debitis.</p>
+                <ul>
+                  <li> <span>1 -</span> Внесок члена клубу <span>70$ (щомісяця);*</span></li>
+                  <li> <span>2 -</span> Внесок саппорт <span>7$ (по бажанню);**</span></li>
+                  <li> <span>3 -</span> Донат для членів клубу, які в ЗСУ <span>700грн;</span></li>
+                  <li> <span>4 -</span> Донат на збір для ремонту мотоциклу після ДТП - (Kawasaki Vulcan 2000 Sobol)
+                    <span>min-100грн;</span>
+                  </li>
+                  <li> <span>5 -</span> Збір на поповнення запасів алкоголю та провізії в CLUB-HOUSE -
+                    <span>500грн;</span>
+                  </li>
+                  <li> <span>6 -</span> Lorem ipsum dolor sit amet consectetur adipisicing. <span>30$;</span></li>
+                  <li> <span>7 -</span> Lorem ipsum dolor sit amet consectetur adipisicing.<span>100$;</span></li>
+                </ul>
+                <p class="inf"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi minima laboriosam
+                    corrupti error
+                    sunt, hic quod.*</span></p>
+              </div>
+            </div>
+            <div class="donate__button">
+              <a class="red-button" href="#">FEE 70$ <br>FOR MEMBER</a>
+              <a href="#">FEE 7$ <br>FOR SUPPORT</a>
+              <a href="#">DONATE 700грн <br>для ЗСУ</a>
+              <a href="#">DONATE 30$ <br>for something</a>
+              <a href="#">DONATE 70$ <br>for something</a>
+              <a href="#">DONATE 50$ <br>for something</a>
+              <a href="#">DONATE 30$ <br>for something</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- BLOCK FOOTER -->
+    <footer class="footer">
+      <div class="footer__title">
+        <h2>CLUB - HOUSE "777 SEVEN'S MCC"</h2>
+      </div>
+      <div class="footer__container">
+        <!-- LEFT-BOX -->
+        <div class="left__box">
+          <img class="clubhouse" src="img/backgrounds/clubhouse.jpg" alt="clubhouse">
+          <div class="left__box-text">
+            <p>UA Ukraine Dnipro - City 49000, вулиця Набережна Перемоги 77Б, Дніпропетровська область.</p>
+            <p>📞Phone : <a class="tel" href="tel:+123456789">+38 (000) 000-00-00</a></p>
+            <p>📮Email : <a class="email" href="mailto:example@example.com">777ssifmcc@gmail.com</a></p>
+          </div>
+        </div>
+        <!-- CENTER BOX -->
+        <div class="center__box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12240.480018061147!2d35.075846370211615!3d48.405746259948685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbfc8e6832cfb3%3A0x71b99ab35f45bcac!2z0K_RhdGCLdC60LvRg9CxINCh0ZbRhw!5e0!3m2!1suk!2sua!4v1706474486134!5m2!1suk!2sua"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="center__box-text">
+            <p>UA Ukraine Dnipro - City 49000, вулиця Набережна Перемоги 77Б, Дніпропетровська область. </p>
+          </div>
+        </div>
+        <!-- RIGHT BOX -->
+        <div class="right__box">
+          <div class="contact__form">
+            <h5 class="contact__form-title">CONTACT US</h5>
+            <form class="form">
+              <br>
+              <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name">
+              <br>
+              <input type="email" id="email" name="email" placeholder="Email" autocomplete="email">
+              <br>
+              <textarea id="message" name="message" rows="4" placeholder="Message" autocomplete="off"></textarea>
+              <button class="button">Send Message</button>
+              <div class="form-social">
+                <a href="https://www.facebook.com/777SSIFMCC?locale=uk_UA" target="_blank"><img src="img/ico/fb.png"
+                    alt="Facebook"></a>
+                <a href="https://www.instagram.com/777mcc_sevens/" target="_blank"><img src="img/ico/inst.png"
+                    alt="Instagram"></a>
+                <a href="https://www.youtube.com/watch?v=U_tyfMUSGo4&t=1947s" target="_blank"><img
+                    src="img/ico/youtube.png" alt="Youtube"></a>
+                <a href="mailto:777ssifmcc@gmail.com" target="_blank"><img src="img/ico/email.png" alt="Email"></a>
+              </div>
+              <div class="form-text">
+                <p>Форма зв'язку для контакту з клубом <br>
+                  <span>777 SEVEN'S MotorCycles Club</span>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- TEXT DESCRIPTION BOX -->
+      <div class="text__box">
+        <p>
+          В нашому комплексі <span>"CLUB-HOUSE 777"</span> ми пропонуємо широкий спектр послуг для мотоциклістів
+          та
+          гостей:</p>
+        <ul>
+          <li> ⚠️ <span>BAR-№7</span>: Байкерський бар, призначений для всіх мотоциклістів та відвідувачів міста.
+          </li>
+          <li> ⚠️ <span>HOTEL №7</span>: Повноцінний готель, де ви можете забронювати номер або переночувати після
+            вечірки
+            у барі.</li>
+          <li> ⚠️ <span>MOTORCYCLES PARKING</span>: Окремий паркінг для мотоциклів та автомобілів гостей
+            комплексу, з
+            охороною.</li>
+          <li> ⚠️ <span>MOTORCYCLES-SERVICES</span>: Технічна станція з обслуговування мотоциклів та шиномонтажем.
+          </li>
+          <li> ⚠️ <span>MOTORCYCLES WASHING</span>: Мийка для мотоциклів, доступна для самостійного миття або
+            професійного обслуговування детейлером.</li>
+        </ul>
+      </div>
+      <!-- DROP-LIST CONTAINER -->
+      <div class="droplist__container">
+        <h2>SERVICES FOR THE BIKERS</h2>
+        <!-- BUTTON BIKERS BAR -->
+        <div class="droplist">
+          <button class="collapsible">BIKERS BAR - №7<span>&#9660;</span></button>
+          <div class="content show">
+            <h4>Bikers Bar Menu:</h4>
+            <p> Ласкаво запрошуємо в справжній байкерський бар, де серце моторошно
+              б'ється в такт розпалених двигунів та
+              душ байкерів. У нашому закладі, присвяченому духу свободи і пригод, кожен мандрівник знаходить своє
+              місце.
+              Відтепер ви неодмінно відчуєте справжню атмосферу байкерського братерства та дружби. <br>Приходьте
+              до нас,
+              щоб відчути справжній дух байкерства, зустріти однодумців та ділитися враженнями від своїх пригод.
+              Відчуйте, що таке бути частиною великої родини байкерів, з набитою пикою...!</p>
+            <hr class="goldline">
+            <ul>
+              <li> - Коктейльний понеділок: "2+1" на фірмові коктейлі*</li>
+              <li> - Щедрий вівторок: -50% на кожен другий бургер</li>
+              <li> - Середа, як маленька п’ятниця: "2+1" на "Jack Daniel’s"</li>
+              <li> - Безлімітний четвер: Безліміт на "Beers" за 500 грн</li>
+              <li> - Коктейльна неділя: "2+1" на фірмові коктейлі*.
+              </li>
+            </ul>
+            <p>*Для броні столику ви можете подзвонити Адміністратору або перейти на сайт "Bar-№7"</p>
+            <!-- BLOCK CALL SERVICES -->
+            <div class="call-services">
+              <!-- Button for call to ADMIN -->
+              <div class="button-message" role="button" onclick="callNumber()">
+                <div class="content-avatar">
+                  <div class="status-user"></div>
+                  <div class="avatar">
+                    <svg class="user-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,12.5c-3.04,0-5.5,1.73-5.5,3.5s2.46,3.5,5.5,3.5,5.5-1.73,5.5-3.5-2.46-3.5-5.5-3.5Zm0-.5c1.66,0,3-1.34,3-3s-1.34-3-3-3-3,1.34-3,3,1.34,3,3,3Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="notice-content">
+                  <div class="username">Administrator Complex</div>
+                  <div class="lable-message">
+                    Забронювати столик: <br>Tell: (073) 000-00-00
+                    <span class="number-message">📞</span>
+                  </div>
+                  <div class="user-id">Support - Kseniya</div>
+                </div>
+              </div>
+              <!-- BUTTON TO LINK WEBSITE BAR7 -->
+              <a class="linkservcomplex" href="https://bar7.com.ua/" target="_blank">Bar-№7 website 🔗</a>
+            </div>
+          </div>
+        </div>
+        <!-- BUTTON HOTEL -->
+        <div class="droplist">
+          <button class="collapsible">BIKERS HOTEL<span>&#9660;</span></button>
+          <div class="content show">
+            <h4>Hotel Services:</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni necessitatibus reiciendis voluptatem
+              delectus nostrum culpa quo, quos odio qui consequuntur amet saepe tempore, nisi quis. Non corporis
+              minima
+              commodi quod. </p>
+            <hr class="goldline">
+            <ul>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+            </ul>
+            <p>* Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            <!-- BLOCK CALL SERVICES -->
+            <div class="call-services">
+              <!-- Button for call to ADMIN -->
+              <div class="button-message" role="button" onclick="callNumber()">
+                <div class="content-avatar">
+                  <div class="status-user"></div>
+                  <div class="avatar">
+                    <svg class="user-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,12.5c-3.04,0-5.5,1.73-5.5,3.5s2.46,3.5,5.5,3.5,5.5-1.73,5.5-3.5-2.46-3.5-5.5-3.5Zm0-.5c1.66,0,3-1.34,3-3s-1.34-3-3-3-3,1.34-3,3,1.34,3,3,3Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="notice-content">
+                  <div class="username">Administrator Complex</div>
+                  <div class="lable-message">
+                    Call Administarator: <br>Tell: (073) 000-00-00
+                    <span class="number-message">📞</span>
+                  </div>
+                  <div class="user-id">Support - Kseniya</div>
+                </div>
+              </div>
+              <!-- BUTTON TO PAGE HOTEL -->
+              <a class="linkservcomplex" href="#" target="_blank">Moto-Hotel#7 🔗</a>
+            </div>
+          </div>
+        </div>
+        <!-- BUTTON MOTORCYCLES PARKING -->
+        <div class="droplist">
+          <button class="collapsible">MOTORCYCLES PARKING<span>&#9660;</span></button>
+          <div class="content show">
+            <h4>Parking your bike:</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni necessitatibus reiciendis voluptatem
+              delectus nostrum culpa quo, quos odio qui consequuntur amet saepe tempore, nisi quis. Non corporis
+              minima
+              commodi quod. </p>
+            <hr class="goldline">
+            <ul>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+            </ul>
+            <p>* Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            <!-- BLOCK CALL SERVICES -->
+            <div class="call-services">
+              <!-- Button for call to ADMIN -->
+              <div class="button-message" role="button" onclick="callNumber()">
+                <div class="content-avatar">
+                  <div class="status-user"></div>
+                  <div class="avatar">
+                    <svg class="user-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,12.5c-3.04,0-5.5,1.73-5.5,3.5s2.46,3.5,5.5,3.5,5.5-1.73,5.5-3.5-2.46-3.5-5.5-3.5Zm0-.5c1.66,0,3-1.34,3-3s-1.34-3-3-3-3,1.34-3,3,1.34,3,3,3Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="notice-content">
+                  <div class="username">Administrator Complex</div>
+                  <div class="lable-message">
+                    Call Administarator: <br>Tell: (073) 000-00-00
+                    <span class="number-message">📞</span>
+                  </div>
+                  <div class="user-id">Support - Kseniya</div>
+                </div>
+              </div>
+              <!-- BUTTON TO PAGE MOTO-PARKING -->
+              <a class="linkservcomplex" href="#" target="_blank">Moto-Parking#7 🔗</a>
+            </div>
+          </div>
+        </div>
+        <!-- BUTTON MOTORCYCLES SERVICES -->
+        <div class="droplist">
+          <button class="collapsible">MOTORCYCLES SERVICES<span>&#9660;</span></button>
+          <div class="content show">
+            <h4>Fix your bike:</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni necessitatibus reiciendis voluptatem
+              delectus nostrum culpa quo, quos odio qui consequuntur amet saepe tempore, nisi quis. Non corporis
+              minima
+              commodi quod. </p>
+            <hr class="goldline">
+            <ul>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+            </ul>
+            <p>* Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            <!-- BLOCK CALL SERVICES -->
+            <div class="call-services">
+              <!-- Button for call to ADMIN -->
+              <div class="button-message" role="button" onclick="callNumber()">
+                <div class="content-avatar">
+                  <div class="status-user"></div>
+                  <div class="avatar">
+                    <svg class="user-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,12.5c-3.04,0-5.5,1.73-5.5,3.5s2.46,3.5,5.5,3.5,5.5-1.73,5.5-3.5-2.46-3.5-5.5-3.5Zm0-.5c1.66,0,3-1.34,3-3s-1.34-3-3-3-3,1.34-3,3,1.34,3,3,3Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="notice-content">
+                  <div class="username">Administrator Complex</div>
+                  <div class="lable-message">
+                    Call Administarator: <br>Tell: (073) 000-00-00
+                    <span class="number-message">📞</span>
+                  </div>
+                  <div class="user-id">Support - Kseniya</div>
+                </div>
+              </div>
+              <!-- BUTTON TO PAGE MOTO-SERVICES#7 -->
+              <a class="linkservcomplex" href="#" target="_blank">Moto-Services#7 🔗</a>
+            </div>
+          </div>
+        </div>
+        <!-- BUTTON MOTORCYCLES WASHING -->
+        <div class="droplist">
+          <button class="collapsible">MOTORCYCLES WASHING<span>&#9660;</span></button>
+          <div class="content show">
+            <h4>Wash your bike:</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni necessitatibus reiciendis voluptatem
+              delectus nostrum culpa quo, quos odio qui consequuntur amet saepe tempore, nisi quis. Non corporis
+              minima
+              commodi quod. </p>
+            <hr class="goldline">
+            <ul>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li> - Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+            </ul>
+            <p>* Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            <!-- BLOCK CALL SERVICES -->
+            <div class="call-services">
+              <!-- Button for call to ADMIN -->
+              <div class="button-message" role="button" onclick="callNumber()">
+                <div class="content-avatar">
+                  <div class="status-user"></div>
+                  <div class="avatar">
+                    <svg class="user-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12,12.5c-3.04,0-5.5,1.73-5.5,3.5s2.46,3.5,5.5,3.5,5.5-1.73,5.5-3.5-2.46-3.5-5.5-3.5Zm0-.5c1.66,0,3-1.34,3-3s-1.34-3-3-3-3,1.34-3,3,1.34,3,3,3Z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="notice-content">
+                  <div class="username">Administrator Complex</div>
+                  <div class="lable-message">
+                    Call Administarator: <br>Tell: (073) 000-00-00
+                    <span class="number-message">📞</span>
+                  </div>
+                  <div class="user-id">Support - Kseniya</div>
+                </div>
+              </div>
+              <!-- BUTTON TO LINK PAGE WASHING -->
+              <a class="linkservcomplex" href="#" target="_blank">Moto-Wash#7 🔗</a>
+            </div>
+          </div>
+        </div>
+        <!--END DROP-LIST CONTAINER -->
+      </div>
+      <!-- COPYRIGHT BOX -->
+      <div class="copyright__box">
+        <div class="copyright">
+          <p>Copyright &#169; 2013-2024 All Rights Reserved. <br> 777 SEVEN'S MotorCycles Club - 777ssifmss.club
+          </p>
+        </div>
+        <div class="apps">
+          <a class="app" href="https://play.google.com/store/games?hl=uk&gl=US" target="_blank"><img
+              src="img/ico/gogleplay.png" alt="googleplay"></a>
+          <a class="app" href="https://apps.apple.com/ru/developer/apple/id284417353?mt=12" target="_blank"><img
+              src="img/ico/ios.png" alt="iosapp"></a>
+        </div>
+        <div class="author">
+          <a href="https://github.com/TimFender" target="_blank"><img class="heartbeat"
+              src="/img/elements/Timfender.png" alt="TimFenderlogo"></a>
+          <p>Author & Creator by Tim-Fender</p>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="scrollToTopLink">TOP&#9650;</a>
+  </div>
+  <!-- Connect script.js file -->
+  <script src="js/main.js"></script>
+  <script src="js/support.js"></script>
+
+</body>
+
+</html>

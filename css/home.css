@@ -1,0 +1,342 @@
+/* Scrollbar deactivated */
+::-webkit-scrollbar {
+  display: none;
+}
+/* The styles for the body of this page are applied in home.css + an additional class ".fade-out" is added, which is tied to the home.js script. */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  filter: blur(0);
+  transition: filter 0.5s ease-in-out;
+  background-color: var(--neutral-950);
+}
+body.fade-out {
+  filter: blur(5px);
+}
+/* !----------------------------------------------------- WRAPPER  --- */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-950);
+  background-image: url("/img/elements/logobackground.png"),
+    url("/img/backgrounds/backgroundwrapper.jpg");
+  background-position: 2% 5%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 10%, cover;
+}
+/* !----------------------------------------------------- END WRAPPER --- */
+
+/* !----------------------------------------------------- HEADER --- */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+/* The audio unit is hidden through "home.CSS". The sound of starting a motorcycle and idling. An audio track is being loaded "harleyaudio.mp3/.ogg"*/
+/* Playback of the audio track is tied to JS-"home.js" */
+.audioblock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100; /* --- So that the audio block is not visible on the page --- */
+}
+.header__title {
+  font-family: "Copperplate Gothic";
+  color: var(--neutral-300);
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
+}
+/* !----------------------------------------------------- END HEADER --- */
+
+/* !----------------------------------------------------- MAIN --- */
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.flag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+.flag__link {
+  display: block;
+}
+.flag__img {
+  max-width: 50vw;
+  height: auto;
+  transition: transform 0.5s;
+}
+.flag__img:hover,
+.flag__img:active {
+  transform: scale(1.1);
+}
+
+/* Animation for image "Flag.webp" + animation for class ".heartbeat" */
+.heartbeat {
+  -webkit-animation: heartbeat 2s ease-in-out infinite both;
+  animation: heartbeat 2s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.92);
+    transform: scale(0.92);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.92);
+    transform: scale(0.92);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+/* !----------------------------------------------------- END MAIN --- */
+
+/* !----------------------------------------------------- FOOTER --- */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+.footer__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.footer__title {
+  color: var(--neutral-300);
+  font-family: "Copperplate Gothic";
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
+}
+/* ------------------------------------------------- Block Social Icons --- */
+.social__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+.social__icons img {
+  max-width: 50px;
+  transition: transform 0.3s;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.social__icons a:hover img,
+.social__icons img:active {
+  transform: scale(1.2);
+}
+/* --- end --- */
+
+.footer__author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  padding: 10px;
+}
+.footer__author span {
+  color: var(--gold-600);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+}
+.footer__author img {
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+
+  transition: transform 0.3s;
+  padding-right: 15px;
+}
+.footer__author img:hover,
+.footer__author img:active {
+  transform: scale(1.1);
+}
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyright {
+  text-align: center;
+  color: var(--neutral-300);
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+}
+/* !----------------------------------------------------------- END FOOTER --- */
+
+/*! ----------------------------------------------------------- ADAPTIVE STYLES --- */
+/* Adaptive style for Smartphones */
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    background-image: url("/img/backgrounds/backgroundwrapper.jpg");
+    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+  }
+  .header__container {
+    padding: 0;
+  }
+  .header__title {
+    font-size: 4.5vw;
+    padding: 0 5px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.2)
+    );
+    padding: 10px 0;
+  }
+  .flag__img {
+    max-width: 90vw;
+  }
+  .flag__img:hover {
+    pointer-events: none;
+  }
+  .footer__title {
+    font-size: 4vw;
+  }
+  .social__icons {
+    gap: 30px;
+  }
+  .social__icons img {
+    max-width: 40px;
+  }
+  .footer__author span {
+    text-align: center;
+    font-size: 3.3vw;
+  }
+  .footer__author img {
+    max-width: 30vw;
+    padding-right: 10px;
+  }
+  .copyright {
+    font-size: 3vw;
+    font-weight: 500;
+    color: var(--neutral-400);
+  }
+}
+/* Adaptive style for Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1144px) {
+  .wrapper {
+    background-image: url("/img/backgrounds/backgroundwrapper.jpg");
+    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+  }
+  .header__title {
+    text-align: center;
+    font-size: 30px;
+  }
+  .flag__img {
+    max-width: 90vw;
+  }
+  .flag__img:hover {
+    pointer-events: none;
+  }
+  .social__icons {
+    display: flex;
+    gap: 40px;
+  }
+  .social__icons img {
+    max-width: 50px;
+  }
+}
+/* Deactivation animation for class ".heartbeat", on monitors min 1144px.*/
+@media only screen and (min-width: 1144px) {
+  .heartbeat {
+    animation: none; /*or animation-name: none; */
+  }
+}

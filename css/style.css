@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600;800&display=swap");
+/* Import by Google-Fonts,  font-family: 'Jost'; */
+
+/* Local fonts, download in project, font-family: "Copperplate Gothic";  */
+@font-face {
+  font-family: "Copperplate Gothic";
+  src: local("../fonts/Copperplate Gothic 30AB"),
+    local("../fonts/Copperplate-Gothic-30AB"),
+    url("../fonts/CopperplateGothicStd-30AB.woff2") format("woff2"),
+    url("../fonts/") format("woff"),
+    url("../fonts/CopperplateGothicStd-30AB.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*todo --- This is a main colors to the project "var". https://uicolors.app/create --- */
+:root {
+  /* GOLD  */
+  --gold-50: #fffdeb;
+  --gold-100: #fef9c7;
+  --gold-200: #fdf38a;
+  --gold-300: #fbe74e;
+  --gold-400: #fad725;
+  --gold-500: #f4b90c;
+  --gold-600: #d88f07;
+  --gold-700: #bd6c0a;
+  --gold-800: #924f0e;
+  --gold-900: #78410f;
+  --gold-950: #452203;
+
+  /* GREY NEUTRAL */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+}
+
+/*todo --- Title style ---  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Copperplate Gothic", sans-serif;
+  color: var(--gold-500);
+  text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+}
+
+/*todo --- Text style --- */
+p,
+span,
+ul,
+li,
+a {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  color: var(--neutral-300);
+}
+mark {
+  color: var(--gold-600);
+  font-weight: 600;
+}

@@ -1,0 +1,1113 @@
+/* Основна оболонка wrapper */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-900);
+  border: none;
+  overflow: hidden;
+}
+
+/*! --------------------------------------------------------- BLOCK HEADER STYLE ---  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 30px 20px 30px;
+  background-color: rgba(18, 18, 18, 0.953);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-bottom: 1.7px solid var(--gold-500);
+}
+.logo img {
+  max-width: 70px;
+  border-radius: 7px;
+  height: auto;
+}
+/* Анімація появи logo через додатковий клас .fade-in-left  */
+.fade-in-left {
+  -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Title "777 SEVEN'S MCC in header" */
+.header__title {
+  display: block;
+  color: var(--gold-600);
+  font-weight: 600;
+}
+/* Анімація появи "Header__Title + News__Title - через додатковий клас .text-focus-in" */
+.text-focus-in {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.menu__link {
+  position: relative;
+  display: inline-flex;
+  font-family: "Copperplate Gothic";
+  font-size: 1.2rem;
+  color: var(--gold-600);
+  padding-bottom: 5px;
+  transition: color 0.5s ease;
+}
+.menu__link:hover,
+.menu__link.active,
+.menu__link:focus {
+  color: var(--neutral-300);
+}
+
+/* Появлення полоски внизу під пунктами меню */
+.menu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold-600);
+  transition: width 0.5s ease;
+  transform-origin: left;
+}
+.menu__link:hover::after {
+  width: 100%;
+}
+
+/* Кнопка меню "burger" яку скрито на великих моніторах */
+#menu {
+  display: none;
+  transition: width 0.5s ease;
+}
+/* Регуляція ширини полоски на різних моніторах */
+@media only screen and (max-width: 767px) {
+  .menu__link:hover::after,
+  .menu__link:focus::after {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1120px) {
+  .menu__link:hover::after,
+  .menu__link:focus::after {
+    width: 14%;
+  }
+}
+/* --- Адаптація меню --- */
+/* Не показувати title в header до 1120px */
+@media only screen and (min-width: 1120px) {
+  .header__title {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 1% 0);
+    transition: 0.5s;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 2px solid var(--gold-500);
+    box-shadow: 0px 6px 11px 0px #000000;
+  }
+  .header .navbar .menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 25px 30px;
+  }
+  /* Стилі кнопки меню burger */
+  #menu {
+    display: block;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--gold-600);
+    transition: width 0.5s ease;
+  }
+  .fa-bars {
+    width: 35px;
+    height: 40px;
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+  .header .navbar.active {
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/*! --------------------------------------------------------- END OF HEADER BLOCK --- */
+
+/*! --------------------------------------------------------- HEADER BIG BANNER BLOCK STYLE --- */
+.headerbanner {
+  position: relative;
+  top: 84px;
+  left: 0;
+  width: 100%;
+}
+.banner {
+  width: 100%;
+}
+.headerbanner__title {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  font-size: 5vw;
+  color: rgba(255, 255, 255, 0.573);
+  opacity: 0.3;
+}
+@media only screen and (min-width: 769px) and (max-width: 1120px) {
+  .headerbanner {
+    top: 93px;
+  }
+}
+/* --- BUTTON FOR MEMBER - Перехід по посиланню в закриту группу Telegram777 --- */
+.btn-telegram {
+  width: auto;
+  height: auto;
+  min-width: 7%;
+  min-height: 7%;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right,
+    #77530a,
+    #ffd277,
+    #77530a,
+    #77530a,
+    #ffd277,
+    #77530a
+  );
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: absolute;
+  top: 41%;
+  left: 14.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9vw;
+  font-weight: 600;
+}
+.btn-telegram::before {
+  position: absolute;
+  content: "MEMBER 🔒";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+.btn-telegram:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+.btn-telegram:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+.btn-telegram:active {
+  transform: scale(0.95);
+}
+/*! --------------------------------------------------------- END HEADER BIG BANNER BLOCK STYLE --- */
+
+/*! --------------------------------------------------------- MAIN BLOCK STYLE --- */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+}
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 4.5%;
+}
+/*! ---------------------------------------------------------- END MAIN BLOCK STYLE --- */
+
+/*! ---------------------------------------------------------- FOOTER BLOCK STYLE --- */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--neutral-950);
+  border-top: 1px solid var(--gold-500);
+}
+.footer__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+}
+.footer__title h2 {
+  font-size: 25px;
+  text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5;
+  border-bottom: 3px solid var(--gold-500);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.left__box,
+.center__box,
+.right__box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--neutral-900);
+  border-radius: 7px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  color: var(--neutral-300);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid var(--gold-600);
+}
+span {
+  color: var(--gold-600);
+}
+.left__box img {
+  width: 100%;
+  height: 60vh;
+  border-radius: 7px;
+}
+
+.left__box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.tel,
+.email {
+  color: var(--neutral-300);
+}
+
+.center__box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+/* Connect to Googgle Maps link */
+iframe {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60vh;
+  border-radius: 7px;
+}
+
+.right__box {
+  background-image: url(/img/backgrounds/emailformbackground.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+  background-clip: border-box;
+}
+
+/* --- CONTACT FORM STYLES --- */
+.contact__form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.718);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Jost", sans-serif;
+  text-align: center;
+}
+
+.contact__form-title {
+  text-align: center;
+  color: var(--neutral-300);
+  font-size: 20px;
+}
+
+form {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  border: 1.7px solid var(--gold-600);
+  background-color: var(--neutral-950);
+  border-radius: 7px;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--neutral-300);
+  font-size: 20px;
+  font-weight: 400;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  margin-bottom: 20px;
+}
+
+.form button {
+  width: 100%;
+  background-color: var(--gold-600);
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--neutral-900);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.form button:hover {
+  background: var(--neutral-300);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Блок соціальних іконок у формі */
+.form-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.form-social img {
+  width: 40px;
+  transition: transform 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form-social a:hover img {
+  transform: scale(1.2);
+}
+.form-social a:active img {
+  transform: scale(1.2);
+}
+.form-text {
+  margin-top: 20px;
+}
+/* ----------- END FORM STYLE --- */
+
+/* BLOCK TEXT__BOX */
+.text__box {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+.text__box ul li {
+  margin-left: 30px;
+  margin-top: 7px;
+  font-size: 20px;
+}
+.text__box span {
+  color: var(--gold-600);
+}
+.text__box p {
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* BLOCK DROPLIST__CONTAINER */
+.droplist__container h2 {
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--neutral-300);
+  text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
+}
+.droplist__container {
+  background-image: url(/img/backgrounds/backgroundfooter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px 20px 0px 0px;
+  border-top: 3px solid rgba(218, 165, 32, 0.279);
+}
+
+.droplist {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.content h4 {
+  width: 60%;
+  text-align: center;
+  font-family: "Copperplate Gothic";
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--gold-700);
+  margin-top: 20px;
+  padding: 0 10px;
+}
+.collapsible {
+  position: relative;
+  width: 40%;
+  font-family: "Copperplate Gothic";
+  background-color: #131313c0;
+  padding: 20px;
+  text-align: left;
+  color: var(--gold-600);
+  font-size: 20px;
+  border-radius: 7px;
+  border-bottom: 3px solid rgba(218, 165, 32, 0.279);
+  transition: background-color 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.164) 0px 2px 1px, rgba(0, 0, 0, 0.887) 0px 4px 2px,
+    rgba(0, 0, 0, 0.425) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.collapsible span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+.collapsible:hover,
+.collapsible:active {
+  background-color: var(--neutral-950);
+  outline: none;
+}
+.collapsible:focus {
+  outline: none; /* Видалити зовнішній контур */
+}
+.content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  padding: 0 18px;
+  border-radius: 0 0 7px 7px;
+  width: 90%;
+}
+.content img {
+  width: 120px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 7px;
+}
+.content p {
+  font-family: "Jost", sans-serif;
+  text-align: left;
+  color: var(--neutral-300);
+  cursor: pointer;
+  padding: 10px;
+  width: 60%;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+  text-indent: 1em;
+}
+.goldline {
+  width: 30%;
+  border-top: 3px solid goldenrod;
+  margin: 0 0 10px 10px;
+}
+.content ul li {
+  font-family: "Jost", sans-serif;
+  color: var(--gold-600);
+  font-size: 20px;
+  font-weight: 500;
+}
+/* BLOCK CALL SERVICES */
+.call-services {
+  display: flex;
+  gap: 30px;
+  margin: 10px 20px;
+  padding-bottom: 10px;
+}
+/* Анімована кнопка виклику адміністратора бару по мобільному телефону */
+
+.button-message {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  -webkit-box-shadow: -10px 10px 10px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -10px 10px 10px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: -10px 10px 10px -5px rgba(0, 0, 0, 0.7);
+  background-color: var(--bg-color);
+  border-radius: 67px;
+  cursor: pointer;
+  padding: 30px 15px;
+  width: fit-content;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  transition: var(--btn-transition);
+
+  --text-color: rgb(244, 243, 243);
+  --bg-color-sup: #5e5e5e;
+  --bg-color: #2b2b2b;
+  --bg-hover-color: #161616;
+  --online-status: #00da00;
+  --btn-transition: all 0.2s ease-out;
+}
+
+.button-message:hover {
+  background-color: var(--bg-hover-color);
+  transition: var(--btn-transition);
+  border-bottom: 1px solid var(--gold-600);
+}
+
+.button-message:active {
+  transform: scale(0.99);
+}
+
+.content-avatar {
+  width: 40px;
+  height: 40px;
+  transition: var(--btn-transition);
+  position: relative;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--bg-color-sup);
+}
+
+.user-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-user {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 50%;
+  outline: solid 2px var(--bg-color);
+  background-color: var(--online-status);
+  transition: var(--btn-transition);
+  animation: active-status 2s ease-in-out infinite;
+}
+
+.button-message:hover .status-user {
+  width: 10px;
+  height: 10px;
+  right: 1px;
+  bottom: 1px;
+  outline: solid 3px var(--bg-hover-color);
+}
+
+.notice-content {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 8px;
+  text-align: initial;
+  color: var(--text-color);
+}
+
+.username {
+  font-size: 18px;
+  letter-spacing: -6px;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: var(--btn-transition);
+}
+
+.user-id {
+  font-size: 16px;
+  color: var(--gold-600);
+  letter-spacing: -6px;
+  height: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--btn-transition);
+}
+
+.lable-message {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: var(--btn-transition);
+}
+
+.button-message:hover .username {
+  height: auto;
+  letter-spacing: normal;
+  opacity: 1;
+  transform: translateY(0);
+  transition: var(--btn-transition);
+}
+
+.button-message:hover .user-id {
+  height: auto;
+  letter-spacing: normal;
+  opacity: 1;
+  transform: translateY(0);
+  transition: var(--btn-transition);
+}
+
+.button-message:hover .lable-message {
+  height: 0;
+  transform: scaleY(0);
+  transition: var(--btn-transition);
+}
+
+.lable-message,
+.username {
+  font-weight: 400;
+}
+
+.number-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 8px;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-color-sup);
+  border-radius: 20px;
+}
+
+/*Анімація кнопки виклику адміністратора*/
+@keyframes active-status {
+  0% {
+    background-color: var(--online-status);
+  }
+  33.33% {
+    background-color: #93e200;
+  }
+  66.33% {
+    background-color: #93e200;
+  }
+  100% {
+    background-color: var(--online-status);
+  }
+}
+.linkservcomplex {
+  height: 59px;
+  text-align: center;
+  padding: 18px 30px;
+  background-color: #2b2b2b;
+  border-radius: 67px;
+  color: var(--neutral-300);
+  font-size: 18px;
+  font-weight: 600;
+  width: fit-content;
+  -webkit-box-shadow: -10px 10px 10px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -10px 10px 10px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: -10px 10px 10px -5px rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s ease;
+}
+.linkservcomplex:hover {
+  background-color: #161616;
+  color: var(--gold-600);
+  border-bottom: 1px solid var(--gold-600);
+}
+
+/* BLOCK COPYRIGHT BOX */
+.copyright__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--neutral-900);
+  border-top: 1px solid var(--neutral-500);
+  padding: 15px 30px;
+}
+
+.copyright p {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  color: var(--neutral-400);
+}
+
+.apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.apps .app img {
+  max-width: 120px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.apps .app img:hover,
+.apps .app img:active {
+  transform: translateY(-10px);
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.author p {
+  color: var(--gold-600);
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+}
+
+.author img {
+  max-width: 100px;
+}
+/* Анімація логотипу TimFender */
+.heartbeat {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* Кнопка TOP яка з'являється при скрол і піднімає вверх. */
+.scrollToTopLink {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 100;
+  font-size: 18px;
+  color: var(--neutral-400);
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.321);
+  padding: 7px;
+  border-radius: 7px;
+  border-bottom: 3px solid var(--gold-600);
+  box-shadow: -3px 3px 10px 1px #000000;
+  transition: box-shadow 0.3s ease;
+}
+.scrollToTopLink:hover {
+  box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.31);
+}
+
+/*! ---------------------------------------------------------- END FOOTER BLOCK STYLE --- */
+
+/*! ---- ADAPTIVE STYLE LAYOUT CSS ---- */
+
+/* Адаптація для екранів смартфонів шириною до 768px*/
+@media only screen and (max-width: 768px) {
+  .headerbanner {
+    display: none;
+  }
+  .main__container {
+    padding: 10px;
+  }
+  .footer__title h2 {
+    text-align: center;
+    font-size: 4.7vw;
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .left__box,
+  .center__box,
+  .right__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .left__box img {
+    height: 340px;
+  }
+  .form-social {
+    margin-top: 10px;
+    gap: 30px;
+  }
+  .text__box {
+    padding: 0 20px;
+  }
+  .text__box p {
+    font-size: 19px;
+    text-align: center;
+    padding: 0px 20px 30px 20px;
+  }
+  .text__box ul li {
+    margin: 0px;
+  }
+  .droplist__container {
+    display: flex;
+    padding: 0 10px;
+  }
+  .droplist__container h2 {
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .droplist {
+    text-align: center;
+  }
+  .collapsible {
+    width: 90%;
+  }
+  .content {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.649);
+    border-radius: 7px;
+  }
+  .content h4 {
+    width: 100%;
+    text-align: center;
+  }
+  .content ul {
+    text-align: left;
+  }
+  .content p {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+  }
+  .goldline {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .call-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-message {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button-message {
+    width: 290px;
+  }
+  .copyright__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright {
+    margin: 10px 0;
+  }
+  .copyright p {
+    text-align: center;
+    font-size: 15px;
+  }
+  .apps .app img {
+    margin-bottom: 15px;
+    text-align: center;
+    max-width: 100px;
+    margin: 5px 35px;
+  }
+  .author {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .author img {
+    width: 90px;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .left__box img {
+    height: 500px;
+  }
+  .content h4 {
+    text-align: center;
+    width: 50%;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+@media only screen and (width: 1280px) {
+  .left__box img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+  }
+}

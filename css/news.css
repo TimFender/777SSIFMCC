@@ -1,0 +1,396 @@
+/* Written in the header__title section. Additional class ".fade-in-left". */
+.news__title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.5;
+  border-bottom: 3px solid var(--gold-500);
+}
+
+/* BLOCK CEP with chains hanging from the header banner and attached to the newsbanner. */
+.cep {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+  margin-right: 150px;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.cep img {
+  width: 30px;
+  height: 170px;
+  filter: drop-shadow(-3px 5px 4px #000000);
+}
+
+/* BLOCK NEWSBANNER - This is a Block for important news! */
+.newsbanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: -6px 7px 12px 3px #000000;
+  border-radius: 7px;
+  background-color: #02000071;
+  margin-bottom: 100px;
+}
+.newsbanner p {
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 0 30px 15px;
+}
+.newsbanner img {
+  max-width: 100%;
+  border-bottom: 2px solid var(--gold-600);
+  border-radius: 7px 7px 0 0;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 64px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 64px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 64px -12px rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+}
+
+/* ----------------------------------------------------------- NEWS CARD SECTION  VERTICAL ---*/
+/* Shell news__cards-section */
+.news__cards-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+/* --- NEWS CARD VERTICAL STYLE --- */
+figure.card {
+  font-family: "Jost", sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-width: 220px;
+  max-width: 320px;
+  width: 100%;
+  background-color: var(--neutral-800);
+  box-shadow: -6px 6px 7px 0px #000000;
+}
+figure.card * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+figure.card .image {
+  max-height: 220px;
+  overflow: hidden;
+}
+figure.card img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+figure.card figcaption {
+  padding: 25px;
+  position: relative;
+}
+figure.card .date {
+  background-color: var(--gold-600);
+  top: 25px;
+  left: 25px;
+  min-height: 48px;
+  min-width: 48px;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+figure.card .date span {
+  display: block;
+  line-height: 1.3;
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+figure.card .date .month {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--neutral-900);
+}
+figure.card h4,
+figure.card p {
+  margin: 0;
+  padding: 0;
+}
+figure.card h4 {
+  min-height: 50px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--gold-600);
+}
+figure.card p {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: left;
+  color: var(--neutral-300);
+  margin-bottom: 20px;
+  line-height: 1.3em;
+}
+.footer-card {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 25px;
+  background-color: var(--neutral-900);
+  font-size: 18px;
+  line-height: 30px;
+  text-align: right;
+  color: var(--gold-600);
+  font-family: "Jost";
+  font-weight: 500;
+}
+figure.card:hover img,
+figure.card.hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/* ----------------------------------------------------------- END NEWS CARD SECTION  VERTICAL --- */
+.blogchapter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 8px 12px 0px #000000;
+  border-radius: 10px;
+  background-image: url(/img/backgrounds/backgroundstore.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blogchapter__title {
+  font-size: 30px;
+  letter-spacing: 7px;
+  filter: drop-shadow(5px 7px 7px #fdfdfd34);
+}
+.blogchapter__paragraph {
+  text-align: center;
+  letter-spacing: 3px;
+  width: 70%;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--neutral-400);
+  margin: 0 auto;
+}
+.blogchapter img {
+  width: 30px;
+  filter: sepia(100%);
+}
+.bold1 {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+}
+.bold2 {
+  position: absolute;
+  top: 40%;
+  right: 2%;
+}
+
+/* ----------------------------------------------------------- NEWS CARDS SECTION HORIZONTAL --- */
+/* General Shell "news__horizontalcards-section". */
+.news__horizontalcards-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.newsbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.newsbox__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--neutral-800);
+  box-shadow: -6px 6px 7px 0px #000000;
+  width: 95%;
+  border-radius: 7px;
+}
+.newsbox__header {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+.newsbox__date {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 20px;
+}
+.newsbox__title {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+.newsbox__title h2 {
+  font-size: 27px;
+  color: var(--gold-600);
+  margin-bottom: 10px;
+}
+.newsbox__body {
+  display: block;
+}
+.newsbox__body img {
+  float: left;
+  max-width: 370px;
+  height: auto;
+  border-radius: 5px 35px 5px 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+.newsbox__body p {
+  font-size: 20px;
+  padding: 0 20px;
+  text-indent: 20px;
+  margin-top: 10px;
+}
+.shared__box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  background-color: var(--neutral-900);
+  padding: 10px;
+  border-radius: 7px;
+}
+
+/* BUTTON FACEBOOK-SHARE */
+.share-btn {
+  font-size: 20px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: var(--gold-600);
+  border-radius: 7px;
+  background-color: var(--neutral-950);
+  border-bottom: 2px solid var(--gold-700);
+  transition: color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.share-btn img {
+  max-width: 30px;
+  text-align: left;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: border-radius 0.3s;
+}
+.share-btn span {
+  font-weight: 600;
+}
+.share-btn:hover,
+.share-btn:active {
+  color: var(--neutral-400);
+  border-color: var(--neutral-400);
+  border-radius: 10px;
+  box-shadow: -2px 2px 10px 1px #dddddd4d;
+}
+.share-btn:hover img,
+.share-btn:active img {
+  border-radius: inherit;
+}
+/* ---------------------------------------------------------- END NEWS CARDS SECTION HORIZONTAL ---*/
+
+/*! --- Adaptive elements for news.css --- */
+/* Adaptation for smartphone screens up to 768px */
+@media (max-width: 768px) {
+  .news__title {
+    margin-top: 90px;
+    font-size: 6vw;
+  }
+  .cep {
+    display: none;
+  }
+  .newsbanner {
+    margin-bottom: 50px;
+  }
+  .newsbanner p {
+    font-size: 18px;
+  }
+  .blogchapter__title {
+    font-size: 6vw;
+    letter-spacing: 5px;
+  }
+  .blogchapter__paragraph {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+  .blogchapter img {
+    width: 20px;
+  }
+  /* Horizontal cards adaptive style */
+  .news__horizontalcards-section,
+  .newsbox__container,
+  .newsbox__header,
+  .newsbox__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .newsbox__title h2 {
+    font-size: 6vw;
+  }
+  .newsbox__date {
+    padding: 0;
+  }
+  .newsbox__body img {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+  .newsbox__body p {
+    text-align: left;
+    line-height: 1.3;
+    font-size: 20px;
+    padding: 0;
+    max-height: 200px;
+    overflow: auto;
+  }
+}
+
+/* Adaptation for tablet screens with a width from 768px to 1280px */
+@media (min-width: 769px) and (max-width: 1280px) {
+  .news__title {
+    margin-top: 40px;
+    font-size: 4vw;
+  }
+  .newsbanner {
+    margin-bottom: 40px;
+  }
+  .newsbanner p {
+    font-size: 18px;
+  }
+}
