@@ -1135,7 +1135,7 @@
 .card-wrapper {
   background-color: #000000;
   border-radius: 10px;
-  background-image: url(/img/backgrounds/backgroundfooter.jpg);
+  background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundfooter.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
