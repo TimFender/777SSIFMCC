@@ -22,8 +22,8 @@ body.fade-out {
   justify-content: center;
   align-items: center;
   background-color: var(--neutral-950);
-  background-image: url("https://raw.githubusercontent.com/TimFender/777SEVENSMCC/main/img/elements/logobackground.png"),
-    url("https://raw.githubusercontent.com/TimFender/777SEVENSMCC/main/img/backgrounds/backgroundwrapper.jpg");
+  background-image: url("/img/elements/logobackground.png"),
+    url("/img/backgrounds/backgroundwrapper.jpg");
   background-position: 2% 5%, 100%;
   background-repeat: no-repeat, no-repeat;
   background-size: 10%, cover;
