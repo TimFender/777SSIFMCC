@@ -956,6 +956,10 @@
   padding: 15px;
 }
 .back-button {
+   position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Jost";
   font-weight: 800;
   font-size: 18px;
