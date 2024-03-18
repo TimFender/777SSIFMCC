@@ -1,45 +1,47 @@
-// Функція відкриття модального вікна при кліку на кнопку "Add to Cart"
-function openModal(modalClass) {
-  var modal = document.querySelector("." + modalClass);
-  modal.style.display = "block";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  // Находим кнопки "Add to Cart"
+  var addToCartButtons = document.querySelectorAll(".back-button");
 
-// Отримуємо всі модальні вікна з класом .modal-store
-var modals = document.querySelectorAll(".modal-store");
-
-// Отримуємо всі карточки товарів
-var productCards = document.querySelectorAll(".product-card");
-
-// Перебираємо отримані карточки товарів
-productCards.forEach(function (card, index) {
-  // Додаємо обробник події кліку до карточки товару
-  card.addEventListener("click", function (event) {
-    // Перевіряємо, чи клікнуто саме на кнопку "Add to Cart"
-    if (event.target.classList.contains("back-button")) {
-      // Отримуємо відповідне модальне вікно
-      var modal = modals[index];
-      // Показуємо модальне вікно
-      openModal(modal.classList[1]); // Викликаємо функцію відкриття модального вікна з класом
-    }
+  // Перебираем найденные кнопки "Add to Cart"
+  addToCartButtons.forEach(function (button) {
+    // Добавляем обработчик события клика только для кнопок "Add to Cart"
+    button.addEventListener("click", function (event) {
+      // Получаем значение атрибута data-modal текущей кнопки
+      var modalClass = button.getAttribute("data-modal");
+      // Показываем модальное окно
+      openModal(modalClass);
+      // Останавливаем всплытие события, чтобы оно не передавалось родительским элементам
+      event.stopPropagation();
+    });
   });
-});
 
-// Перебираємо отримані модальні вікна
-modals.forEach(function (modal) {
-  // Отримуємо кнопку закриття модального вікна в поточному модальному вікні
-  var closeBtn = modal.querySelector(".close");
+  // Функция открытия модального окна
+  function openModal(modalClass) {
+    console.log("Открытие модального окна:", modalClass); // Добавляем вывод в консоль
+    var modal = document.querySelector("." + modalClass);
+    modal.style.display = "block";
+  }
 
-  // Функція закриття модального вікна
-  closeBtn.onclick = function () {
-    modal.style.display = "none";
-  };
-});
-
-// Закриваємо модальне вікно, якщо користувач клікає за його межами
-window.onclick = function (event) {
+  // Перебираем найденные модальные окна
+  var modals = document.querySelectorAll(".modal-store");
   modals.forEach(function (modal) {
-    if (event.target == modal) {
+    // Находим кнопку закрытия модального окна в текущем модальном окне
+    var closeBtn = modal.querySelector(".close");
+
+    // Добавляем обработчик события клика для закрытия модального окна
+    closeBtn.addEventListener("click", function () {
+      console.log("Закрытие модального окна"); // Добавляем вывод в консоль
       modal.style.display = "none";
-    }
+    });
   });
-};
+
+  // Закрываем модальное окно, если пользователь кликнул за его пределами
+  window.addEventListener("click", function (event) {
+    modals.forEach(function (modal) {
+      if (event.target == modal) {
+        console.log("Клик вне модального окна"); // Добавляем вывод в консоль
+        modal.style.display = "none";
+      }
+    });
+  });
+});
