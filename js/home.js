@@ -1,6 +1,13 @@
 // Логіка та поведінка сторінки "index.html" Після завантаження сторінки користувач натискає на посилання у вигляді картинки флагу клуба, після цього включається аудіофайл і через 5 секунд відбувається плавний перехід на сторінку "news.html". Плавний перехід з ефектом блюр (scc/home.css).
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Автоматичне оновлення року в футері
+  var yearElement = document.getElementById("current-year");
+  if (yearElement !== null) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+document.addEventListener("DOMContentLoaded", function () {
   // Отримуємо посилання і аудіоелемент
   var link = document.getElementById("delayedLink");
   var audioElement = document.getElementById("audioin");
