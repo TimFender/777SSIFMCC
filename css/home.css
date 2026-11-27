@@ -88,7 +88,7 @@ body.fade-out {
 }
 .flag__img {
   max-width: 50vw;
-  max-height: 45vh;
+  max-height: 35vh;
   width: auto;
   height: auto;
   transition: transform 0.5s;
