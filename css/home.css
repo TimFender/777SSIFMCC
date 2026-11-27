@@ -200,10 +200,14 @@ body.fade-out {
 /* ADAPTIVE: Smartphones */
 @media only screen and (max-width: 767px) {
   .wrapper {
+    justify-content: space-evenly;
     background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundwrapper.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .header {
+    margin-bottom: 15px;
   }
   .header__container {
     padding: 0;
@@ -213,6 +217,9 @@ body.fade-out {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
     padding: 10px 5px;
   }
+  .main__section {
+    padding: 10px;
+  }
   .flag__img {
     height: auto;
     margin: 0;
@@ -221,14 +228,25 @@ body.fade-out {
   .flag__img:hover {
     pointer-events: none;
   }
+  .footer {
+    margin-top: 15px;
+  }
+  .footer__container {
+    padding: 10px;
+  }
   .footer__title {
     font-size: 4vw;
+    margin: 0 0 20px;
   }
   .social__icons {
     gap: 30px;
+    margin-bottom: 15px;
   }
   .social__icons img {
     max-width: 40px;
+  }
+  .footer__author {
+    padding: 10px;
   }
   .footer__author span {
     text-align: center;
