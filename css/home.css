@@ -80,11 +80,11 @@ body.fade-out {
   display: block;
 }
 .flag__img {
-  height: 47vh;
+  height: 50vh;
   width: auto;
   max-width: 60vw;
   max-height: 55vh;
-  margin: 4vh 0;
+  margin: 3vh 0;
   transition: transform 0.5s;
 }
 .flag__img:hover,
@@ -265,5 +265,23 @@ body.fade-out {
 @media only screen and (min-width: 1144px) {
   .heartbeat {
     animation: none;
+  }
+}
+/* EVEN SPACING: laptops and desktops */
+@media only screen and (min-width: 1144px) {
+  .wrapper {
+    justify-content: space-evenly;
+  }
+  .footer__container {
+    gap: clamp(8px, 2vh, 18px);
+  }
+  .footer__title {
+    margin: 0;
+  }
+  .social__icons {
+    margin-bottom: 0;
+  }
+  .footer__author {
+    padding: 0;
   }
 }
