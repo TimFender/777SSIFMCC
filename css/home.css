@@ -67,7 +67,7 @@ body.fade-out {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3vh 0;
+  padding: 0;
 }
 .flag {
   width: 100%;
@@ -80,10 +80,11 @@ body.fade-out {
   display: block;
 }
 .flag__img {
-  height: 48vh;
+  height: 42vh;
   width: auto;
   max-width: 60vw;
   max-height: 55vh;
+  margin: 5vh 0;
   transition: transform 0.5s;
 }
 .flag__img:hover,
@@ -214,6 +215,7 @@ body.fade-out {
   }
   .flag__img {
     height: auto;
+    margin: 0;
     max-width: 90vw;
   }
   .flag__img:hover {
@@ -252,6 +254,7 @@ body.fade-out {
   }
   .flag__img {
     height: auto;
+    margin: 0;
     max-width: 90vw;
   }
   .flag__img:hover {
