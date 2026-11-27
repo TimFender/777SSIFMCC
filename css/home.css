@@ -81,7 +81,7 @@ body.fade-out {
 }
 .flag__img {
   max-width: 50vw;
-  max-height: 35vh;
+  max-height: 42vh;
   width: auto;
   height: auto;
   transition: transform 0.5s;
@@ -138,7 +138,7 @@ body.fade-out {
   font-size: clamp(16px, 3vh, 30px);
   font-weight: 400;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: clamp(8px, 2vh, 20px);
   text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
 }
 .social__icons {
@@ -146,11 +146,11 @@ body.fade-out {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s;
-  gap: 40px;
+  gap: clamp(20px, 4vh, 40px);
   margin-bottom: 10px;
 }
 .social__icons img {
-  max-width: 50px;
+  max-width: clamp(28px, 5vh, 50px);
   transition: transform 0.3s;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -175,7 +175,7 @@ body.fade-out {
 .footer__author img {
   text-align: center;
   width: 100%;
-  max-width: 200px;
+  max-width: clamp(100px, 16vh, 200px);
   height: auto;
   transition: transform 0.3s;
   padding-right: 15px;
@@ -254,12 +254,6 @@ body.fade-out {
   }
   .flag__img:hover {
     pointer-events: none;
-  }
-  .social__icons {
-    gap: 40px;
-  }
-  .social__icons img {
-    max-width: 50px;
   }
 }
 /* Heartbeat off on large monitors */
