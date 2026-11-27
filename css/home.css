@@ -56,7 +56,7 @@ body.fade-out {
 .header__title {
   font-family: "Copperplate Gothic";
   color: var(--neutral-300);
-  font-size: 30px;
+  font-size: clamp(16px, 3vh, 30px);
   font-weight: 400;
   text-align: center;
   text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
