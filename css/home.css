@@ -193,7 +193,7 @@ body.fade-out {
 .copyright {
   text-align: center;
   color: var(--neutral-300);
-  font-size: clamp(11px, 1.8vh, 18px);
+  font-size: clamp(12px, 2.1vh, 20px);
   font-weight: 500;
   font-family: "Jost", sans-serif;
 }
