@@ -2,7 +2,6 @@
 ::-webkit-scrollbar {
   display: none;
 }
-/* The styles for the body of this page are applied in home.css + an additional class ".fade-out" is added, which is tied to the home.js script. */
 body {
   margin: 0;
   padding: 0;
@@ -14,7 +13,7 @@ body {
 body.fade-out {
   filter: blur(5px);
 }
-/* !----------------------------------------------------- WRAPPER  --- */
+/* WRAPPER */
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -28,9 +27,7 @@ body.fade-out {
   background-repeat: no-repeat, no-repeat;
   background-size: 10%, cover;
 }
-/* !----------------------------------------------------- END WRAPPER --- */
-
-/* !----------------------------------------------------- HEADER --- */
+/* HEADER */
 .header {
   display: flex;
   justify-content: center;
@@ -45,13 +42,11 @@ body.fade-out {
   align-items: center;
   padding: 10px;
 }
-/* The audio unit is hidden through "home.CSS". The sound of starting a motorcycle and idling. An audio track is being loaded "harleyaudio.mp3/.ogg"*/
-/* Playback of the audio track is tied to JS-"home.js" */
 .audioblock {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -100; /* --- So that the audio block is not visible on the page --- */
+  z-index: -100;
 }
 .header__title {
   font-family: "Copperplate Gothic";
@@ -61,9 +56,7 @@ body.fade-out {
   text-align: center;
   text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
 }
-/* !----------------------------------------------------- END HEADER --- */
-
-/* !----------------------------------------------------- MAIN --- */
+/* MAIN */
 .main {
   width: 100%;
   display: flex;
@@ -97,83 +90,33 @@ body.fade-out {
 .flag__img:active {
   transform: scale(1.1);
 }
-
-/* Animation for image "Flag.webp" + animation for class ".heartbeat" */
 .heartbeat {
-  -webkit-animation: heartbeat 2s ease-in-out infinite both;
   animation: heartbeat 2s ease-in-out infinite both;
-}
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.92);
-    transform: scale(0.92);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
 }
 @keyframes heartbeat {
   from {
-    -webkit-transform: scale(1);
     transform: scale(1);
-    -webkit-transform-origin: center center;
     transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   10% {
-    -webkit-transform: scale(0.95);
     transform: scale(0.95);
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   17% {
-    -webkit-transform: scale(0.98);
     transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   33% {
-    -webkit-transform: scale(0.92);
     transform: scale(0.92);
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   45% {
-    -webkit-transform: scale(1);
     transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
-/* !----------------------------------------------------- END MAIN --- */
-
-/* !----------------------------------------------------- FOOTER --- */
+/* FOOTER */
 .footer {
   display: flex;
   justify-content: center;
@@ -198,7 +141,6 @@ body.fade-out {
   margin-bottom: 20px;
   text-shadow: -6px 5px 2px rgba(0, 0, 0, 0.6);
 }
-/* ------------------------------------------------- Block Social Icons --- */
 .social__icons {
   display: flex;
   justify-content: center;
@@ -217,8 +159,6 @@ body.fade-out {
 .social__icons img:active {
   transform: scale(1.2);
 }
-/* --- end --- */
-
 .footer__author {
   display: flex;
   justify-content: center;
@@ -228,7 +168,7 @@ body.fade-out {
 }
 .footer__author span {
   color: var(--gold-600);
-  font-size: 18px;
+  font-size: clamp(12px, 2.2vh, 18px);
   font-weight: 600;
   font-family: "Jost", sans-serif;
 }
@@ -237,7 +177,6 @@ body.fade-out {
   width: 100%;
   max-width: 200px;
   height: auto;
-
   transition: transform 0.3s;
   padding-right: 15px;
 }
@@ -253,19 +192,16 @@ body.fade-out {
 .copyright {
   text-align: center;
   color: var(--neutral-300);
-  font-size: 18px;
+  font-size: clamp(11px, 1.8vh, 18px);
   font-weight: 500;
   font-family: "Jost", sans-serif;
 }
-/* !----------------------------------------------------------- END FOOTER --- */
-
-/*! ----------------------------------------------------------- ADAPTIVE STYLES --- */
-/* Adaptive style for Smartphones */
+/* ADAPTIVE: Smartphones */
 @media only screen and (max-width: 767px) {
   .wrapper {
     background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundwrapper.jpg");
     background-position: center;
-    background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
   }
   .header__container {
@@ -273,13 +209,8 @@ body.fade-out {
   }
   .header__title {
     font-size: 4.5vw;
-    padding: 0 5px;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.2)
-    );
-    padding: 10px 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+    padding: 10px 5px;
   }
   .flag__img {
     max-width: 90vw;
@@ -310,17 +241,13 @@ body.fade-out {
     color: var(--neutral-400);
   }
 }
-/* Adaptive style for Tablets */
+/* ADAPTIVE: Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1144px) {
   .wrapper {
     background-image: url("https://raw.githubusercontent.com/TimFender/777SSIFMCC/main/img/backgrounds/backgroundwrapper.jpg");
     background-position: center;
-    background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
-  }
-  .header__title {
-    text-align: center;
-    font-size: 30px;
   }
   .flag__img {
     max-width: 90vw;
@@ -329,16 +256,15 @@ body.fade-out {
     pointer-events: none;
   }
   .social__icons {
-    display: flex;
     gap: 40px;
   }
   .social__icons img {
     max-width: 50px;
   }
 }
-/* Deactivation animation for class ".heartbeat", on monitors min 1144px.*/
+/* Heartbeat off on large monitors */
 @media only screen and (min-width: 1144px) {
   .heartbeat {
-    animation: none; /*or animation-name: none; */
+    animation: none;
   }
 }
