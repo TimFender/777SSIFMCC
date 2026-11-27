@@ -80,10 +80,10 @@ body.fade-out {
   display: block;
 }
 .flag__img {
-  height: 50vh;
+  height: 54vh;
   width: auto;
   max-width: 60vw;
-  max-height: 55vh;
+  max-height: 58vh;
   margin: 3vh 0;
   transition: transform 0.5s;
 }
