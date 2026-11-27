@@ -192,7 +192,7 @@ body.fade-out {
 .footer__title {
   color: var(--neutral-300);
   font-family: "Copperplate Gothic";
-  font-size: 30px;
+  font-size: clamp(16px, 3vh, 30px);
   font-weight: 400;
   text-align: center;
   margin-bottom: 20px;
